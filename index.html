@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 基础设置 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 页面标题和描述 -->
+    <title>周星盘的个人网站 | Web开发者</title>
+    <meta name="description" content="周星盘的个人网站，分享Web开发、自动化部署技术和项目经验。">
+    <meta name="keywords" content="个人网站,Web开发,GitHub Pages,自动化部署,前端开发,周星盘">
+    <meta name="author" content="周星盘">
+    
+    <!-- Favicon 图标 -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- 主题颜色 -->
+    <meta name="theme-color" content="#007acc">
+    
+    <!-- Open Graph (社交媒体分享) -->
+    <meta property="og:title" content="周星盘的个人网站">
+    <meta property="og:description" content="Web开发者，专注于自动化部署和前端技术">
+    <meta property="og:image" content="https://xingpan-zhou.github.io/xp-website/images/og-image.jpg">
+    <meta property="og:url" content="https://xingpan-zhou.github.io/xp-website">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="周星盘的个人网站">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="周星盘的个人网站">
+    <meta name="twitter:description" content="Web开发者，专注于自动化部署和前端技术">
+    <meta name="twitter:image" content="https://xingpan-zhou.github.io/xp-website/images/twitter-image.jpg">
+    
+    <!-- 规范链接 -->
+    <link rel="canonical" href="https://xingpan-zhou.github.io/xp-website">
+    
+    <!-- 安全头部 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 结构化数据 (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "周星盘的个人网站",
+      "url": "https://xingpan-zhou.github.io/xp-website",
+      "description": "个人技术博客和项目展示",
+      "author": {
+        "@type": "Person",
+        "name": "周星盘",
+        "jobTitle": "Web开发者",
+        "url": "https://xingpan-zhou.github.io/xp-website"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://xingpan-zhou.github.io/xp-website/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+<!-- 移动端菜单脚本 -->
+<script>
+// 移动端菜单切换
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            menuToggle.innerHTML = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // 点击菜单项关闭菜单
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.innerHTML = '☰';
+            });
+        });
+    }
+    
+    // 检测设备类型
+    function detectDevice() {
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (isMobile) {
+            document.body.classList.add('mobile-device');
+        } else {
+            document.body.classList.add('desktop-device');
+        }
+    }
+    
+    detectDevice();
+    
+    // 触摸反馈优化
+    document.addEventListener('touchstart', function() {}, {passive: true});
+});
+</script>
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "周星盘",
+  "url": "https://xingpan-zhou.github.io/xp-website",
+  "image": "https://xingpan-zhou.github.io/xp-website/images/profile.jpg",
+  "sameAs": [
+    "https://github.com/xingpan-zhou",
+    "https://gitee.com/xingpan-zhou"
+  ],
+  "jobTitle": "Web开发者",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "个人项目"
+  }
+}
+</script>
+    <h1>欢迎来到我的网站！</h1>
+    <p>这是我的个人网站，使用 Gitee Pages 托管。</p>
+</body>
+</html>
